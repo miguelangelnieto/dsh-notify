@@ -30,15 +30,20 @@ closes the same turn produces one banner instead of two.
 
 ## Install
 
-Clone the repository and add the directory in **Plugins → Add plugin**, or point
-the profile at it:
+Add this directory as a profile bundle: **Plugins → Add plugin** in the app, or
+ask the agent to run the `plugin_manager` tool with `install_bundle` and this
+directory's absolute path.
 
-```sh
-git clone https://github.com/miguelangelnieto/dsh-notify.git
-```
+Either route installs the package and selects the bundle. Installing the package
+alone with pnpm (`dsh plugin --profile <profile> add <dir>`) is not enough: the
+bundle must also be listed under `dsh.profile.bundles` in the profile's
+`package.json`, which is what the two routes above do.
 
-The bundle is `@local/dsh-notify`; the row it inserts is `dsh-notify`, so a
-profile patch can override its `config` without touching the package.
+The package deliberately keeps the local name `@local/dsh-notify`; rename it before
+publishing to a registry. It installs the row `dsh-notify`, so the feature can be
+disabled from Plugins without uninstalling the package.
+
+Refresh the Web page once after installing so its client bundle is fetched.
 
 ## Configuration
 
