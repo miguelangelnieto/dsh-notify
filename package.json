@@ -1,0 +1,50 @@
+{
+  "name": "@local/dsh-notify",
+  "version": "1.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Miguel Ángel Nieto <correo@miguelangelnieto.net>",
+  "description": "Desktop notifications when an agent finishes a reply or needs your input.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "notifications",
+    "desktop"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelangelnieto/dsh-notify.git"
+  },
+  "homepage": "https://github.com/miguelangelnieto/dsh-notify#readme",
+  "bugs": {
+    "url": "https://github.com/miguelangelnieto/dsh-notify/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

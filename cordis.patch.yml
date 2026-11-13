@@ -1,0 +1,16 @@
+# Desktop notifications: a native banner when an agent finishes a reply, asks
+# you a question, or needs an approval. Defaults suit a laptop that is not
+# always showing the window. Override any key in your profile's patch, for
+# example:
+#
+#   - id: dsh-notify
+#     config:
+#       approvals: false
+#       sound: ''
+#       minReplySeconds: 8
+#       fallback: false        # never use the system notifier (page only)
+#       suppressWhenFocused: true
+- insert:
+    - id: dsh-notify
+      name: '@local/dsh-notify'
+      config: {}

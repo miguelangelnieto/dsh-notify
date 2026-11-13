@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Notificaciones de escritorio",
+    "description": "Muestra una notificación del sistema cuando un agente termina una respuesta, te hace una pregunta con opciones o espera una aprobación de herramienta, para que no tengas que mirar la ventana durante turnos largos. La mitad del Host observa el registro de la sesión y el aviso lo publica la página dentro de la ventana de la app, así que lleva el nombre y el icono de DeepSeek Harness y al pulsarlo se abre la app; si no hay página conectada se usa el notificador del sistema (osascript o notify-send). No añade peticiones al modelo ni escribe nada en la sesión. Se configura en Plugins → Notificaciones de escritorio con las claves replies, questions, approvals, subagents, excerpt, minReplySeconds, fallback, suppressWhenFocused, sound y title. Recarga la página una vez tras instalarlo; desactivar el plugin no cambia ninguna otra función.",
+    "detail": "docs/DETAIL.es.md"
+  }
+}

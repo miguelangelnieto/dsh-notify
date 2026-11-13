@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Desktop notifications",
+    "description": "Sends a native desktop notification when an agent finishes a reply, asks you a question with options, or waits for a tool approval, so long turns do not need your eyes on the window. The Host half observes the session log; the banner is posted by the page inside the app window, so it carries the DeepSeek Harness name and icon and a click opens the app, with the system notifier (osascript or notify-send) as the fallback when no page is attached. It adds no model requests and writes nothing to the Session. Configure it in Plugins → Desktop notifications with the keys replies, questions, approvals, subagents, excerpt, minReplySeconds, fallback, suppressWhenFocused, sound, and title. Reload the page once after installing; turning the plugin off leaves every other feature unchanged.",
+    "detail": "docs/DETAIL.md"
+  }
+}
